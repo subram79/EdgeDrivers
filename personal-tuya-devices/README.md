@@ -177,6 +177,11 @@ Once you include/modify your model file, execute the command `npm start` to gene
 
   <img src="resources/configuration_4.jpeg" height="300"/>
 
+- **Raw HTML is being displayed**<br />
+  Due to recent update in the app, HTML is not allowed anymore.<br />
+  I created a Feature Request in the hope it gets upvotes enough so they could revert their position.<br />
+  Here is the link: [[Feature request] Allowing HTML in custom capabilities](https://community.smartthings.com/t/feature-request-allowing-html-in-custom-capabilities/280399)
+
 ## Currently untested configurations
 
 - Door Control
