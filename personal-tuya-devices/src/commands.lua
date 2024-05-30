@@ -297,7 +297,7 @@ local defaults = {
   },
   carbonMonoxideMeasurement = {
     capability = "carbonMonoxideMeasurement",
-    attribute = "carbonMonoxide",
+    attribute = "carbonMonoxideLevel",
     rate_name = "rate",
     rate = 100,
     reportingInterval = 1,
