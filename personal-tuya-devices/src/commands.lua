@@ -295,6 +295,17 @@ local defaults = {
       return 100 * to_number(value) / get_value(pref[self.rate_name], self.rate)
     end,
   },
+  carbonMonoxideMeasurement = {
+    capability = "carbonMonoxideMeasurement",
+    attribute = "carbonMonoxide",
+    rate_name = "rate",
+    rate = 100,
+    reportingInterval = 1,
+    from_zigbee = function (self, value, device)
+      local pref = get_child_or_parent(device, self.group).preferences
+      return 100 * to_number(value) / get_value(pref[self.rate_name], self.rate)
+    end,
+  },
   -- colorControl = {
   --   capability = "colorControl",
   --   attribute = "color",
