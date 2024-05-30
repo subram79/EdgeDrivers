@@ -295,6 +295,35 @@ local defaults = {
       return 100 * to_number(value) / get_value(pref[self.rate_name], self.rate)
     end,
   },
+  carbonMonoxideMeasurement = {
+    capability = "carbonMonoxideMeasurement",
+    attribute = "carbonMonoxideLevel",
+    rate_name = "rate",
+    rate = 100,
+    reportingInterval = 1,
+    from_zigbee = function (self, value, device)
+      local pref = get_child_or_parent(device, self.group).preferences
+      return 100 * to_number(value) / get_value(pref[self.rate_name], self.rate)
+    end,
+  },
+  carbonMonoxideDetector = {
+    capability = "carbonMonoxideDetector",
+    attribute = "carbonMonoxide",
+    from_zigbee = function (self, value, device)
+      local pref = get_child_or_parent(device, self.group).preferences
+      local v = to_number(value)
+      local output = nil
+      if pref.reverse then
+        output = v == 0 and "clear" or (device:get_field("tested") and "tested" or "detected")
+      else
+        output = v == 0 and (device:get_field("tested") and "tested" or "detected") or "clear"
+      end
+      if output == "clear" then
+        device:set_field("tested", nil)
+      end
+      return output
+    end,
+  },
   -- colorControl = {
   --   capability = "colorControl",
   --   attribute = "color",
