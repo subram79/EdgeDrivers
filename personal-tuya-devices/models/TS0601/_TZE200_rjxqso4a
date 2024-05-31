@@ -1,0 +1,42 @@
+# https://community.smartthings.com/t/st-edge-personal-tuya-devices-generic-ef00-device/255270/468?u=w35l3y
+# _TZE200_rjxqso4a - carbon monoxide detector
+#[1, 'carbon_monoxide', tuya.valueConverter.trueFalse0],
+#[2, 'co', tuya.valueConverter.raw],
+#[9, 'self_test_result', tuya.valueConverter.selfTestResult],
+#[15, 'battery', tuya.valueConverter.raw],
+#[16, 'silence', tuya.valueConverter.raw],
+
+deviceLabel: Carbon Monoxide Detector
+profiles:
+  - child-carbonMonoxideDetector-v1
+  - child-carbonMonoxideMeasurement-v1
+datapoints:
+  - id: 1
+    command: carbonMonoxideDetector
+    base:
+      group: 1
+  - id: 2
+    command: carbonMonoxideMeasurement
+    base:
+      group: 1
+  - id: 9
+    command: testCapability
+    base:
+      group: 1
+      capability: carbonMonoxideDetector
+      attribute: carbonMonoxide
+      on: tested
+      off: clear
+   - id: 16
+    command: audioMute
+    base:
+      group: 1
+  - id: 15
+    command: battery
+    base:
+      group: 1
+- id: -16
+    command: momentaryAudioMuteTestCapability
+    base:
+      group: 1
+      
