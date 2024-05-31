@@ -27,15 +27,11 @@ datapoints:
       attribute: carbonMonoxide
       on: tested
       off: clear
-   - id: 16
-    command: audioMute
-    base:
-      group: 1
   - id: 15
     command: battery
     base:
       group: 1
-- id: -16
+  - id: -16
     command: momentaryAudioMuteTestCapability
     base:
       group: 1
