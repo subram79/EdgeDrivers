@@ -136,6 +136,22 @@ preferences:
     definition:
       stringType: text
       default: ""
+ - name: carbonMonoxDetDatapoints
+    title: CO sensors
+    description: List of datapoints used for CO sensors (comma-separated)
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
+ - name: carbonMonoxMeaDatapoints
+    title: CO sensors
+    description: List of datapoints used for CO sensors (comma-separated)
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
   # - name: colorControlDatapoints
   #   title: Color controls
   #   description: List of datapoints used for color controls (comma-separated)
