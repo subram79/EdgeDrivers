@@ -10,6 +10,7 @@ deviceLabel: Carbon Monoxide Detector
 profiles:
   - child-carbonMonoxideDetector-v1
   - child-carbonMonoxideMeasurement-v1
+  - normal-smokeDetector-v1
 datapoints:
   - id: 1
     command: carbonMonoxideDetector
@@ -31,7 +32,7 @@ datapoints:
     command: battery
     base:
       group: 1
-  - id: -16
+  - id: 16
     command: momentaryAudioMuteTestCapability
     base:
       group: 1
