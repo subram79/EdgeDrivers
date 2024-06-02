@@ -11,6 +11,16 @@ components:
         version: 1
     categories:
       - name: Smoke Detector
+preferences:
+  - name: rate
+    title: Rate
+    description: Set 0 to use default value
+    required: true
+    preferenceType: number
+    definition:
+      minimum: 0
+      maximum: 100000
+      default: 0
 metadata:
   deviceType: SmokeDetector
   ocfDeviceType: x.com.st.d.sensor.smoke
