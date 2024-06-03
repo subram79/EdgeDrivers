@@ -19,7 +19,7 @@ components:
 preferences:
   - name: profile
     title: Profile
-    description: "Recommended only for testing whether your device is compatible or not with the ones already predefined.        "
+    description: "Recommended only for testing whether your device is compatible or not with the ones already predefined.         "
     required: true
     preferenceType: enumeration
     definition:
@@ -35,6 +35,7 @@ preferences:
         normal_air_quality_v2: Air Quality
         normal_alarm_v1: Alarm
         normal_contactSensor_v2: Contact Sensor
+        normal_coDetector_v1: CO Detector
         normal_garage_door_v1: Garage Door
         normal_gasDetector_v1: Gas Detector
         normal_irrigation_v1: Irrigation
@@ -136,6 +137,22 @@ preferences:
     definition:
       stringType: text
       default: ""
+  - name: carbonMonoxDetDatapoints
+     title: CO detectors
+     description: List of datapoints used for CO detectors (comma-separated)
+     required: true
+     preferenceType: string
+     definition:
+       stringType: text
+       default: ""
+  - name: carbonMonoxMeaDatapoints
+     title: CO sensors
+     description: List of datapoints used for CO sensors (comma-separated)
+     required: true
+     preferenceType: string
+     definition:
+       stringType: text
+       default: ""
   # - name: colorControlDatapoints
   #   title: Color controls
   #   description: List of datapoints used for color controls (comma-separated)

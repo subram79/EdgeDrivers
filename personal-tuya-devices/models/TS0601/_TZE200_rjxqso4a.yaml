@@ -8,9 +8,7 @@
 
 deviceLabel: Carbon Monoxide Detector
 profiles:
-  #- child-carbonMonoxideDetector-v1
-  #- child-carbonMonoxideMeasurement-v1
-  - normal-coDetector-v1
+  - normal_coDetector_v1
 datapoints:
   - id: 1
     command: carbonMonoxideDetector

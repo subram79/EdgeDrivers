@@ -1,0 +1,129 @@
+# https://developer.smartthings.com/docs/devices/device-profiles#categories
+# https://community.smartthings.com/t/change-icons-in-new-app/184190/25?u=w35l3y
+name: "normal-coDetector-v1"
+components:
+  - id: main
+    label: Detector
+    capabilities:
+      - id: carbonMonoxideDetector
+        version: 1
+      - id: carbonMonoxideMeasurement
+        version: 1
+      # - id: audioMute
+      #   version: 1
+      #   config:
+      #     values:
+      #       - key: "{{enumCommands}}"
+      #         enabledValues:
+      #           []
+      #           # - "mute"
+      - id: momentary
+        version: 1
+      - id: battery
+        version: 1
+      - id: signalStrength
+        version: 1
+      - id: refresh
+        version: 1
+      - id: valleyboard16460.debug
+        version: 1
+    categories:
+      - name: Siren
+preferences:
+  - name: profile
+    title: Profile
+    description: Choose the profile
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        normal_coDetector_v1: Normal
+        generic_ef00_v1: Generic
+      default: normal_coDetector_v1
+  - name: logLevel
+    title: Log level
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        error: Error
+        warn: Warn, Error
+        info: Info, Warn, Error
+        debug: Debug, Info, Warn, Error
+      default: error
+#  - name: manufacturer
+#    title: Manufacturer
+#    description: Choose the manufacturer
+#    required: false
+#    preferenceType: enumeration
+#    definition:
+#      options:
+#        _: Auto
+#        _TZE200_m9skfctm: _TZE200_m9skfctm (1,15)
+#        _TZE204_ntcy3xu1: _TZE204_ntcy3xu1 (1,14*)
+  - preferenceId: reverse
+    explicit: true
+  - name: batteryMode
+    title: Battery Mode
+    description: "Choose the battery mode"
+    required: false
+    preferenceType: enumeration
+    definition:
+      default: auto
+      options:
+        auto: auto
+        enum: enum
+        value: value (0-100%)
+  - name: dpCarbonMonoxideDeMain01
+    title: DP for CO Detector
+    description: Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+  - name: dpCarbonMonoxideMeMain01
+    title: DP for CO Measurement
+    description: Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+  # - name: dpAudioMuteMain01
+  #   title: DP for Audio Mute
+  #   description: Only if you want to override the default DataPoint
+  #   required: true
+  #   preferenceType: integer
+  #   definition:
+  #     minimum: 0
+  #     maximum: 255
+  #     default: 0
+  - name: dpTestCapabilityMain01
+    title: DP for Test Mode
+    description: Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+  - name: dpBatteryMain01
+    title: DP for Battery
+    description: Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+metadata:
+  deviceType: SmokeDetector
+  ocfDeviceType: x.com.st.d.sensor.smoke
+  deviceTypeId: SmokeDetector
+  mnmn: SmartThingsCommunity
+owner:
+  ownerType: USER
+  ownerId: ea35e8c8-3aef-2f72-958b-e3ad10644043
