@@ -18,7 +18,7 @@ components:
       - name: Generic Sensor
 preferences:
   - name: profile
-    title: Profile
+    title: Sensors
     description: "Recommended only for testing whether your device is compatible or not with the ones already predefined.        "
     required: true
     preferenceType: enumeration
