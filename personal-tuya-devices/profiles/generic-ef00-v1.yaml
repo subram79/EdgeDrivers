@@ -36,6 +36,7 @@ preferences:
         normal_alarm_v1: Alarm
         normal_contactSensor_v2: Contact Sensor
         normal_garage_door_v1: Garage Door
+        normal_coDetector_v1: CarbonMonoxide Detector
         normal_gasDetector_v1: Gas Detector
         normal_irrigation_v1: Irrigation
         # normal_momentary_v1: Momentary
