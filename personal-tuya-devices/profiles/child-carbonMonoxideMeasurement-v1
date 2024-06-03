@@ -9,3 +9,23 @@ components:
         version: 1
       - id: refresh
         version: 1
+    categories:
+      - name: Smoke Detector
+preferences:
+  - name: rate
+    title: Rate
+    description: Set 0 to use default value
+    required: true
+    preferenceType: number
+    definition:
+      minimum: 0
+      maximum: 100000
+      default: 0
+metadata:
+  deviceType: SmokeDetector
+  ocfDeviceType: x.com.st.d.sensor.smoke
+  deviceTypeId: SmokeDetector
+  mnmn: SmartThingsCommunity
+owner:
+  ownerType: USER
+  ownerId: ea35e8c8-3aef-2f72-958b-e3ad10644043
