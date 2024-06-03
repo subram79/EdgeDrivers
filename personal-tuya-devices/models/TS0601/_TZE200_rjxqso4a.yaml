@@ -33,7 +33,9 @@ datapoints:
     base:
       group: 1
   - id: 16
+    command: audioMute
+  - id: -16
     command: momentaryAudioMuteTestCapability
     base:
       group: 1
-      
+      testCapability: 9
